@@ -1,0 +1,37 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido principal</title>
+    <script src="/eel.js"></script>
+</head>     
+<body>
+
+    <div class="menu">
+        <ul>
+            <li>Inicio</li>
+            <li><p onclick="cargarContenido(0)">Agregar Factura</p></li>
+            <li><p onclick="cargarContenido(1)">Observar Facturas</p></li>
+            <li><a href="view-factura.html"></a></li>
+            <li>Opciones múltiples
+                <ul>
+                    <li><a href="update-factura.html">Edición de Facturas</a></li>
+                    <li>Pago de Facturas</li>
+                    <li>Anulación de pago</li>
+                </ul>
+            </li>
+            <li>Impuestos a pagar</li>
+        </ul>
+    </div>
+
+    <div id="contenido-Externo">
+        <!-- Aquí se cargará el contenido dinámico -->
+    </div>
+
+    
+    <script src="../js/controladores.js"></script>
+
+</body>
+
+</html>
