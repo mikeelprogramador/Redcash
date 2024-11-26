@@ -5,32 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contenido principal</title>
     <script src="/eel.js"></script>
+    <link rel="stylesheet" href="../css/redcash.css">
+    <link rel="stylesheet" href="../css/create-factura.css">
 </head>     
 <body>
 
     <div class="menu">
         <ul>
-            <li>Inicio</li>
-            <li><p onclick="cargarContenido(0)">Agregar Factura</p></li>
+            <li><p>Inicio</p></li>
+            <li><p onmouseover="cambiarMouse(event)" onmouseout="cambiarMouse(event)" onclick="cargarContenido(0)">Agregar Factura</p></li>
             <li><p onclick="cargarContenido(1)">Observar Facturas</p></li>
-            <li><a href="view-factura.html"></a></li>
-            <li>Opciones múltiples
+            <li><p>Opciones múltiples</p>
                 <ul>
-                    <li><a href="update-factura.html">Edición de Facturas</a></li>
-                    <li>Pago de Facturas</li>
-                    <li>Anulación de pago</li>
+                    <li><p>Edición de Facturas</p></li>
+                    <li><p>Pago de Facturas</p></li>
+                    <li><p>Anulación de pago</p></li>
                 </ul>
             </li>
-            <li>Impuestos a pagar</li>
+            <li><p>Impuestos a pagar</p></li>
         </ul>
     </div>
-
+    
     <div id="contenido-Externo">
         <!-- Aquí se cargará el contenido dinámico -->
     </div>
 
+    <div class="advertencia-pantalla">
+        Pantalla demasiado pequeña para mostrar el menú adecuadamente.
+    </div>
+    
+
     
     <script src="../js/controladores.js"></script>
+    <script src="../js/create-factura.js"></script>
 
 </body>
 

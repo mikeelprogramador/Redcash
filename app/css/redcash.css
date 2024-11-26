@@ -1,0 +1,112 @@
+/* Estilos generales del menú */
+.advertencia-pantalla {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px; /* Ancho reducido para un diseño más minimalista */
+    height: 100%; /* Altura completa */
+    background-color: #f5f5f5; /* Fondo gris muy suave */
+    color: #2c3e50; /* Texto oscuro para contraste */
+    padding-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 12px 0;
+}
+
+.menu li p {
+    padding: 12px 20px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease; /* Efectos suaves */
+    color: #2c3e50; /* Color de texto oscuro */
+}
+
+.menu li p:hover {
+    background-color: #dcdcdc; /* Fondo gris suave cuando pasas el ratón */
+    padding-left: 30px; /* Desplazamiento al pasar el ratón */
+}
+
+.menu li p:active {
+    background-color: #b0b0b0; /* Fondo gris más claro al hacer clic */
+}
+
+/* Submenú */
+.menu li ul {
+    list-style-type: none;
+    padding-left: 20px;
+    display: none; /* Inicialmente oculto */
+}
+
+.menu li:hover > ul {
+    display: block; /* Mostrar submenú al pasar sobre el item */
+}
+
+.menu li ul li p {
+    background-color: #e0e0e0; /* Color gris suave para submenú */
+    padding-left: 25px; /* Desplazamiento adicional para submenú */
+}
+
+/* Estilos para el contenido */
+#contenido-Externo {
+    margin-left: 220px; /* Deja espacio para el menú */
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+}
+
+/* Estilo para la advertencia de pantalla pequeña */
+@media screen and (max-width: 600px) {
+    .menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contenido-Externo {
+        margin-left: 0;
+    }
+
+    .advertencia-pantalla {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(231, 76, 60, 0.9); /* Rojo suave */
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        z-index: 2000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+/* Estilo de la advertencia */
+@media screen and (max-width: 600px) {
+    .advertencia-pantalla {
+        display: block; /* Mostrar advertencia si la pantalla es muy pequeña */
+    }
+}

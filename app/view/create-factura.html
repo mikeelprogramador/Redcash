@@ -1,11 +1,28 @@
-<div>
+<div class="create-factura">
     <h2>Agregar una nueva factura</h2>
-    <form>
-        <label for="facturaId">ID de Factura:</label>
-        <input type="text" id="facturaId" name="facturaId"><br><br>
+    <form onsubmit="chek_on(event)">
+        <label for="nameEmpresa">Nombre de la Empresa:</label>
+        <input type="text" id="nameEmpresa" name="nameEMpresa">
 
-        <label for="monto">Monto:</label>
-        <input type="text" id="monto" name="monto"><br><br>
+        <label for="dateEntrega">Fecha de Entrega:</label>
+        <input type="datetime-local" id="dateEntrega" name="dateEntrega">
+
+        <label for="dataVencimiento">Fecha de Vencimiento:</label>
+        <input type="datetime-local" id="dataVencimiento" name="dataVencimiento">
+
+        <label for="costoFactura">Costo de Factura:</label>
+        <span id="typeError1" class="error-message" style="display:none;"></span>
+        <input type="text" id="costoFactura" name="costoFactura">
+
+        <label for="iva">
+            <input type="checkbox" id="iva" name="iva"> ¿La factura contiene el impuesto de IVA?
+        </label>
+
+        <div class="valor-iva">
+            <label for="valorFactura">Valor de impuesto IVA:</label>
+            <span id="typeError2" class="error-message" style="display:none;"></span>
+            <input type="text" id="valorIva" name="valorIva">
+        </div>
 
         <input type="submit" value="Guardar Factura">
     </form>
