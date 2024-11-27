@@ -76,4 +76,37 @@
     }
 }
 
+/* Estilo para el input de tipo number */
+.create-factura input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fafafa;
+}
 
+/* Estilo cuando el input de tipo number está enfocado */
+.create-factura input[type="number"]:focus {
+    border-color: #66b3ff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Eliminar los botones de incremento y decremento en Webkit (Chrome, Safari) */
+.create-factura input[type="number"]::-webkit-outer-spin-button,
+.create-factura input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Eliminar los botones de incremento y decremento en Firefox */
+.create-factura input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Asegurar que el cursor sea similar al de los otros inputs */
+.create-factura input[type="number"]:not(:focus) {
+    cursor: text;
+}

@@ -108,5 +108,6 @@
 @media screen and (max-width: 600px) {
     .advertencia-pantalla {
         display: block; /* Mostrar advertencia si la pantalla es muy pequeña */
+        overflow: hidden;
     }
 }

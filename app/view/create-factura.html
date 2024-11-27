@@ -12,16 +12,16 @@
 
         <label for="costoFactura">Costo de Factura:</label>
         <span id="typeError1" class="error-message" style="display:none;"></span>
-        <input type="text" id="costoFactura" name="costoFactura">
+        <input type="number" id="costoFactura" name="costoFactura" onkeypress="validarDatos(event)">
 
         <label for="iva">
-            <input type="checkbox" id="iva" name="iva"> ¿La factura contiene el impuesto de IVA?
+            <input type="checkbox" id="iva" name="iva" onchange="checkbok()"> ¿La factura contiene el impuesto de IVA?
         </label>
-
-        <div class="valor-iva">
+        <br>
+        <div class="valor-iva" id="valor-iva" >
             <label for="valorFactura">Valor de impuesto IVA:</label>
             <span id="typeError2" class="error-message" style="display:none;"></span>
-            <input type="text" id="valorIva" name="valorIva">
+            <input type="number" id="valorIva" name="valorIva" onkeypress="validarDatos(event)">
         </div>
 
         <input type="submit" value="Guardar Factura">

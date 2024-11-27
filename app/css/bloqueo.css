@@ -1,0 +1,21 @@
+/* Estilo para bloquear la interfaz */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Fondo semitransparente */
+    display: none;  /* Está oculto por defecto */
+    z-index: 9999;
+}
+
+/* Estilo para el botón que abre la subventana */
+#open-subwindow {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

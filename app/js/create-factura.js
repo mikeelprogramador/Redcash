@@ -1,18 +1,30 @@
 function chek_on(event){
     event.preventDefault();
-    var valorFactura = document.getElementById("costoFactura").value;
-    var mensaje = document.getElementById("typeError1");  // Mensaje de error
-
-
-    valorFactura = Number(valorFactura);
-    if( isNaN(valorFactura)){
-        mensaje.style.display = "block";
-        mensaje.innerHTML = "* ¡Error!, el tipo de dato debe ser numérico.";
-
-    }else{
-        asterisk.style.display = "none";
-        mensaje.style.display = "none";
-    }
+    document.getElementById('overlay').style.display = 'block';
+    eel.abrir_subventana();
 
 }
 
+function validarDatos(event) {
+    if( event.key === "-" || event.key === "e"){
+        event.preventDefault();
+    }
+}
+
+function checkbok(){
+    let chek = document.getElementById("iva");
+    let contenido = document.getElementById("valor-iva")
+    if ( chek.checked){
+        contenido.style.display = "block";
+    }else{
+        contenido.style.display = "none";
+    }
+}
+
+
+
+
+function unlockMainWindow() {
+    // Ocultar el overlay (desbloquear)
+    document.getElementById('overlay').style.display = 'none';
+}
