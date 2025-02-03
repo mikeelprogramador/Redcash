@@ -1,5 +1,6 @@
 let currentIndex = 0;
 const container = document.querySelector('.container');
+const desplazamientoMenu = document.querySelector('.menudo');
 const sections = document.querySelectorAll('.section');
 const opciones = document.querySelectorAll('.opccion');
 const totalSections = sections.length;
@@ -13,27 +14,16 @@ window.addEventListener('wheel', (event) => {
         currentIndex = (currentIndex - 1 + totalSections) % totalSections;
     }
 
-    setTimeout(function(){
-        container.style.transform = 'translateX(-' + (currentIndex * 25) + '%)';
-    }, 100);
+    movimientoX(currentIndex);
 });
 
+function menu(lugarIndex) {
+    movimientoX(lugarIndex);
+}
 
-opciones.forEach(opcion => {
-    opcion.addEventListener('mouseenter', () => {
-        opcion.style.cursor = 'pointer'; 
-    });
-
-    opcion.addEventListener('mouseleave', () => {
-        opcion.style.cursor = 'default';  
-    });
-});
-
-
-function menu(lugarIndex){
-
-    setTimeout(function(){
-        container.style.transform = 'translateX(-' + (lugarIndex * 25) + '%)';
+function movimientoX(index) {
+    setTimeout(function () {
+        container.style.transform = 'translateX(-' + (index * 25) + '%)';
+        desplazamientoMenu.style = 'margin-right' + (index * 50) + '%)';
     }, 100);
-
 }
