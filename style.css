@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100%;
 }
 
@@ -14,7 +14,7 @@ body, html {
 
 .section {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,39 +22,42 @@ body, html {
     color: white;
 }
 
-.section:nth-child(2) { background-color: #3498db; }
-.section:nth-child(3) { background-color: #2ecc71; }
-.section:nth-child(4) { background-color: #e74c3c; }
-.section:nth-child(5) { background-color: #9b59b6; }
+.section:nth-child(1) { background-color: #3498db; }
+.section:nth-child(2) { background-color: #2ecc71; }
+.section:nth-child(3) { background-color: #e74c3c; }
+.section:nth-child(4) { background-color: #9b59b6; }
 
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: yellow;
-    height: 10vh;
-    justify-content: center;
-}
-
-
-.menudo {
+.scrollable {
     position: relative;
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    margin-left: 50%;
-    
-    
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 5vh;
 }
-
-.menu .opccion {
-    padding: 1em;
+  
+.scrollable > div {
+    flex-shrink: 0;
+    width: 25%;
+    text-align: center;
     cursor: pointer;
 }
 
-.menu .opccion:hover {
-    background-color: #f1c40f;
+/* Cuadro pequeño que aparece al pasar el cursor */
+.scrollable > div::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 0.3s;
+}
+  
+/* Efecto al pasar el cursor */
+.scrollable > div:hover::after {
+    width: 100%;
 }

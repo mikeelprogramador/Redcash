@@ -1,6 +1,6 @@
 let currentIndex = 0;
 const container = document.querySelector('.container');
-const desplazamientoMenu = document.querySelector('.menudo');
+const desplazamientoMenu = document.querySelector('.menu');
 const sections = document.querySelectorAll('.section');
 const opciones = document.querySelectorAll('.opccion');
 const totalSections = sections.length;
@@ -24,6 +24,6 @@ function menu(lugarIndex) {
 function movimientoX(index) {
     setTimeout(function () {
         container.style.transform = 'translateX(-' + (index * 25) + '%)';
-        desplazamientoMenu.style = 'margin-right' + (index * 50) + '%)';
+        
     }, 100);
 }
